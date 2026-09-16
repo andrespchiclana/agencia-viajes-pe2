@@ -1,0 +1,157 @@
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 6%;
+    overflow: hidden;
+    border: 3px solid var(--color-primario);
+    border-radius: 8px;
+}
+
+#viajeCarrusel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#imagenCarrusel {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+#destinoCarrusel,
+#fraseCarrusel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+#destinoCarrusel {
+    bottom: 4.5rem;
+    font-size: 2rem;
+}
+
+#fraseCarrusel {
+    bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+#flechaIzq,
+#flechaDer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+#flechaIzq {
+    left: 15px;
+}
+
+#flechaDer {
+    right: 15px;
+}
+
+#flechaIzq:hover,
+#flechaDer:hover {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.bienvenida {
+    text-align: center;
+    padding: 4% 10%;
+    margin-bottom: 4%;
+}
+
+.bienvenida h2 {
+    color: var(--color-primario);
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+.bienvenida p {
+    line-height: 1.6;
+}
+
+.buscador {
+    background-color: var(--color-secundario);
+    padding: 5% 8%;
+    text-align: center;
+    margin-bottom: 5%;
+    border: 2px solid var(--color-primario);
+    border-radius: 8px;
+}
+
+.buscador h3 {
+    color: var(--color-primario);
+    margin-bottom: 3%;
+}
+
+.buscador form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3%;
+}
+
+.buscador label {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: left;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+.buscador input {
+    width: 100%;
+    margin-top: 5%;
+    border: 1px solid var(--color-fondo);
+    border-radius: 4px;
+}
+
+.buscador button {
+    background-color: var(--color-botones);
+    color: var(--color-fondo);
+    padding: 2% 5%;
+    font-weight: bold;
+}
+
+.buscador button:hover {
+    background-color: var(--color-primario);
+}
+
+@media (max-width: 768px) {
+    .carrusel {
+        height: 40vh;
+    }
+
+    .bienvenida {
+        padding: 6% 4%;
+    }
+
+    .buscador form {
+        flex-direction: column;
+    }
+
+    .buscador label,
+    .buscador input,
+    .buscador button {
+        width: 100%;
+    }
+
+    .buscador button {
+        margin-top: 6%;
+    }
+}

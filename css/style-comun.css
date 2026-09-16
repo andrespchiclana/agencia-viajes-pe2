@@ -1,0 +1,205 @@
+:root {
+    --color-primario: steelblue;
+    --color-secundario: lightblue;
+    --color-botones: orange;
+    --color-fondo: whitesmoke;
+    --color-texto: dimgray;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+main {
+    padding: 4% 6%;
+}
+
+/* HEADER */
+header {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 5%;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 30%;
+}
+
+header form {
+    width: 35%;
+    text-align: right;
+}
+
+header form input {
+    width: 45%;
+    padding: 2%;
+    margin-bottom: 2%;
+    border: 1px solid var(--color-fondo);
+    border-radius: 4px;
+}
+
+header form button {
+    background-color: var(--color-botones);
+    color: var(--color-fondo);
+    padding: 2% 4%;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+header form a {
+    color: var(--color-fondo);
+    margin-left: 2%;
+    text-decoration: underline;
+}
+
+/* NAV */
+nav {
+    width: 100%;
+    background-color: var(--color-secundario);
+    margin-top: 2%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    color: var(--color-fondo);
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--color-botones);
+}
+
+/* FORMULARIOS GENERALES */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    padding: 2%;
+    border: 1px solid var(--color-secundario);
+    border-radius: 6px;
+    margin-bottom: 3%;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tarjeta-registro {
+    width: 80%;
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.tarjeta-registro p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-texto);
+}
+
+.tarjeta-registro a {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--color-primario);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.tarjeta-registro a:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    text-align: center;
+    padding: 4% 5%;
+    margin-top: 5%;
+}
+
+footer p {
+    margin-bottom: 2%;
+}
+
+footer a {
+    color: var(--color-botones);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--color-fondo);
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 6% 4%;
+    }
+
+    header h1,
+    header form {
+        width: 100%;
+        text-align: center;
+    }
+
+    header h1 {
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    header form input,
+    header form button {
+        width: 40%;
+        margin-bottom: 3%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 4%;
+    }
+}

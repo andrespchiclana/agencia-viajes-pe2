@@ -1,0 +1,147 @@
+/* VIAJES Y VIAJES EN GRUPO */
+
+main {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.menu-lateral {
+    width: 25%;
+    background-color: white;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.menu-lateral h2,
+.menu-lateral h3 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.menu-lateral p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.menu-lateral li {
+    margin-bottom: 0.5rem;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+.menu-lateral a:hover {
+    color: var(--color-primario);
+}
+
+.info-viajes {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.info-viajes h2,
+.info-viajes > p,
+.paginacion {
+    grid-column: 1 / -1;
+}
+
+.info-viajes h2 {
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.info-viajes > p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.destino {
+    background-color: white;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    transition: transform 0.2s;
+}
+
+.destino a{
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+.destino:hover {
+    transform: translateY(-4px);
+}
+
+.destino img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.destino h4 {
+    color: var(--color-primario);
+    margin: 1rem 1rem 0.5rem;
+}
+
+.destino p {
+    margin: 0 1rem 1rem;
+    line-height: 1.5;
+}
+
+.destino ul {
+    margin: 0 1rem;
+    padding-left: 1.2rem;
+}
+
+.destino li {
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+    list-style: none;
+}
+
+.paginacion {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.paginacion a {
+    display: inline-block;
+    background-color: var(--color-botones);
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.paginacion a:hover {
+    background-color: var(--color-primario);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .menu-lateral,
+    .info-viajes {
+        width: 100%;
+    }
+
+    .info-viajes {
+        grid-template-columns: 1fr;
+    }
+}

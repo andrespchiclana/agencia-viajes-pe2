@@ -1,0 +1,141 @@
+/* OFERTAS */
+
+main {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.leyenda {
+    background-color: white;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    padding: 1.5rem;
+    grid-column: 1;
+}
+
+.leyenda h2 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.leyenda p {
+    margin-bottom: 0.75rem;
+    padding: 0.7rem;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.texto-alta {
+    color: #d9534f;
+}
+
+.texto-media {
+    color: #f0ad4e;
+}
+
+.texto-baja {
+    color: #5cb85c;
+}
+
+.calendario {
+    background-color: white;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-collapse: separate;
+    border-spacing: 10px;
+    width: 100%;
+}
+
+.calendario th {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+    padding: 0.7rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendario .fila-meses th {
+    background-color: var(--color-primario);
+    padding: 0.9rem;
+    font-size: 1.05rem;
+}
+
+.calendario td {
+    width: 70px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.calendario td.alta,
+.calendario td.media,
+.calendario td.baja {
+    color: var(--color-fondo);
+}
+
+.calendario td.alta::before,
+.calendario td.media::before,
+.calendario td.baja::before {
+    content: "";
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.calendario td.alta::before {
+    background-color: #d9534f;
+}
+
+.calendario td.media::before {
+    background-color: #f0ad4e;
+}
+
+.calendario td.baja::before {
+    background-color: #5cb85c;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .leyenda {
+        width: 100%;
+    }
+
+    .calendario {
+        max-width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .calendario td {
+        width: 60px;
+        height: 52px;
+    }
+
+    .calendario td.alta::before,
+    .calendario td.media::before,
+    .calendario td.baja::before {
+        width: 36px;
+        height: 36px;
+    }
+}

@@ -1,0 +1,78 @@
+.historia,
+.valores,
+.datos-desarrollador,
+.oficinas {
+    background-color: white;
+    padding: 5% 8%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+}
+
+.historia h2,
+.valores h3,
+.datos-desarrollador h2,
+.oficinas h3 {
+    color: var(--color-primario);
+    margin-bottom: 3%;
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 2%;
+}
+
+.historia p,
+.valores p,
+.datos-desarrollador p,
+.oficina p {
+    margin-bottom: 2%;
+    line-height: 1.6;
+}
+
+.valores ul,
+.oficina ul {
+    list-style: none;
+}
+
+.valores li,
+.oficina ul li {
+    margin-bottom: 2%;
+}
+
+.plano-oficinas {
+    margin: 5% 0;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.listado-oficinas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4%;
+    margin: 4% 0;
+}
+
+.oficina {
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-secundario);
+    padding: 6%;
+    border-radius: 8px;
+}
+
+.oficina h4 {
+    color: var(--color-primario);
+    margin-bottom: 6%;
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 3%;
+}
+
+@media (max-width: 768px) {
+    .listado-oficinas {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .historia,
+    .valores,
+    .datos-desarrollador,
+    .oficinas {
+        padding: 6% 5%;
+    }
+}
